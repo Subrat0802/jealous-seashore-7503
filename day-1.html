@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif, Impact;
+        }
+        .nav{
+            width: 100%;
+            height: 95px;
+            background-color: #212121;
+            display: flex;
+            /* position: fixed;
+            margin-top: 0%; */
+            
+        }
+        #selecttags{
+            display: flex;
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        #selecttags>img{
+            width: 195px;
+            height: 45%;
+            margin-right: 15px;
+
+        }
+        #selecttags select, button{
+            background-color: #212121;
+            border: none;
+            color: whitesmoke;
+            font-size: 18px;
+            
+        }
+
+        #signin{
+            width: 50%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-right: 20px;
+
+        }
+        #signin select{
+            background-color: #212121;
+            font-size: 18px;
+            color: white;
+            border: none;
+        }
+        #signin button{
+            border: 1px solid white;
+            padding: 12px 20px;
+            margin-left: 10px;
+            font-size: 15px;
+        }
+        #signin button:hover{
+            color: grey;
+        }
+        #signin>div{
+            
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+        }
+        #signin>div img{
+            width: 100%;
+            background-color: #212121;
+            
+        }
+        #offer{
+            background-color: white;
+            height: 60vh;
+            
+        }
+        
+        #offer img{   
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            cursor: pointer;
+            /* anchor tag */
+        }
+        #course{
+            width: 100%;
+            height: 135vh;
+            background-color: black;
+        }
+        #line{
+            border: 3px solid #FF007B;
+            width: 0px;
+            height: 120px;
+            margin: auto;
+        }
+        #childcourse{
+            width: 75%;
+            margin: auto;
+            padding-top: 70px;
+        }
+        #childcourse>h4{
+            color: #FF007B;
+            margin-bottom: 10px;
+        }
+        #childcourse>h1{
+            color: white;
+        }
+        #gridcourse{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-auto-rows: auto;
+            gap: 40px 55px;
+            margin-top: 40px;
+            
+        }
+        #gridcourse>div{
+            background-color: #212121;
+            border-radius: 10px;
+            padding: 35px 20px;
+
+        }
+        .courseInfo{
+            display: flex;
+        }
+        .courseInfo>div{
+            width: 50%;
+            height: 100%;
+        }
+        .courseInfo img{
+            width: 50%;
+            display: flex;
+            justify-content: right;
+        }
+        .courseInfo>div:nth-child(1){
+            padding-top: 10px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        .courseInfo>div:nth-child(2){
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            
+        }
+        .courseInfo h5{
+            color: #FF007B;
+        }
+        .courseInfo p{
+            color: white;
+        }
+        .courseInfo p:nth-child(3){
+            color: grey;
+        }
+        .courseInfo h4{
+            color: white;
+            margin-top: 15px;
+        }
+        .courseInfo span{
+            color: #FF007B;
+        }
+        #feature{
+            background-color: #181818;
+            width: 100%;
+            height: 200vh;
+            padding: 180px 20px;
+        }
+        #feature>h4{
+            color: #FF007B;
+        }
+        #feature>h1{
+            color: white;
+            margin-top: 10px;
+        }
+        
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- navigation bar -->
+
+    <div class="nav">
+
+
+        <div id="selecttags">
+            <img src="https://www.pluralsight.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/global/header/PS_logo.png" alt="">
+
+            <select name="" id="">
+                <option value=""><b>Platform</b></option>
+            </select>
+            <select name="" id="">
+                <option value=""><b>Products</b> </option>
+            </select>
+            <select name="" id="">
+                <option value="">Resources</option>
+            </select>
+            <button>For Individuals</button>
+        
+        </div>
+
+
+        <div id="signin">
+
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR2CB8wEXJ7Ik6_xZs3vCKjoYXQPNuISKmI6yJNyr4PQ&s" alt="">
+            </div>
+            
+            <select name="" id="">
+                <option value="">Signin</option>
+            </select>
+
+            <button><b>TRY FOR FREE</b> </button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- offer image div -->
+
+
+    <div id="offer">
+        <img src="https://www.pluralsight.com/content/dam/pluralsight2/b2c-promos/q3-2022-33--off/hp-black-copy-limited-time.png" alt="">
+    </div>
+
+
+    <div id="course">
+        <div id="line"></div>
+
+
+        <div id="childcourse">
+            <h4>TRENDING TECHNOLOGIES</h4>
+            <h1>Popular topics to learn now</h1>
+
+            <div id="gridcourse">
+                <div class="courseInfo">
+                    <div>
+                        <h5>PATH</h5>
+                        <p>JavaScript</p>
+                        <p>11 Courses</p>
+                        <h4>Take a look <span>></span></h4>
+                    </div>
+                    <div>
+                        <img src="https://pluralsight2.imgix.net/paths/images/javascript-542e10ea6e.png" alt="">
+                    </div>
+                </div>
+                <div class="courseInfo">
+                    <div>
+                        <h5>PATH</h5>
+                        <p>Angular</p>
+                        <p>15 Courses</p>
+                        <h4>Take a look <span>></span></h4>
+                    </div>
+                    <div>
+                        <img src="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png" alt="">
+                    </div>
+                </div>
+                <div class="courseInfo">
+                    <div>
+                        <h5>PATH</h5>
+                        <p>Core Python</p>
+                        <p>16 Courses</p>
+                        <h4>Take a look <span>></span></h4>
+                    </div>
+                    <div>
+                        <img src="https://pluralsight.imgix.net/paths/python-7be70baaac.png" alt="">
+                    </div>
+                </div>
+                <div class="courseInfo">
+                    <div>
+                        <h5>PATH</h5>
+                        <p>C#</p>
+                        <p>13 Courses</p>
+                        <h4>Take a look <span>></span></h4>
+                    </div>
+                    <div>
+                        <img src="https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png?" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>    
+    </div>
+
+
+    <div id="feature">
+        <h4>SEE WHAT'S NEW</h4>
+        <h1>Our latest features</h1>
+    </div>
+
+
+</body>
+</html>
