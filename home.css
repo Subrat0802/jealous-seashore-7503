@@ -28,11 +28,11 @@
 #selecttags select {
     border: 0px;
     text-decoration: none;
+    outline: none;
 }
 
 #selecttags option {
     display: none;
-    border: 1px solid #181818;
 }
 
 #selecttags>img {
@@ -72,6 +72,9 @@ button {
     padding: 12px 20px;
     margin-left: 10px;
     font-size: 15px;
+}
+#signin button:nth-child(1){
+    border: none;
 }
 
 #signin button:hover {

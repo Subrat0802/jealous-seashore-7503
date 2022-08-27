@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./register.css">
+    <title>sign in | page</title>
+</head>
+
+<body>
+
+    <div id="whole">
+        <div id="first">
+
+            <img src="https://app.pluralsight.com/id/img/login-logo.png" alt="">
+
+            <form action="">
+                <label for="">Name</label> <br>
+                <input type="text" id="name"><br>
+                <label for="">Email</label> <br>
+                <input type="email" id="email"><br>
+                <label for="">Password</label> <br>
+                <input type="password" id="password"><br>
+
+                <input type="submit" placeholder="Signin" id="subbtn">
+
+            </form>
+            <div id="sign">
+                <a href="./signin.html">
+                    <p>Signin from here</p>
+                </a>
+            </div>
+        </div>
+        <div id="second">
+            <img src="https://www.pluralsight.com/content/dam/pluralsight2/login/login-h1.png" alt="">
+        </div>
+    </div>
+</body>
+
+<script>
+    let form=document.querySelector("form");
+    let userData=JSON.parse(localStorage.getItem("userData")) || [];
+    
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            name:form.name.value,
+            email:form.email.value,
+            password:form.password.value
+        }
+        if(checkEmails(data.email)=== true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+        }
+        else{
+            alert("Account Already Exist");
+        }
+    })
+
+    function checkEmails(email){
+        let filtered  = userData.filter(function(element){
+            return email === element.email;
+
+        })
+        if(filtered.length>0){
+            return false
+        }
+        else{
+            return true;
+        }
+    }
+    function sign(){
+        window.location.href="signin.html";
+        alert="";
+    }
+</script>
+
+</html>
