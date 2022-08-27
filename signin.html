@@ -1,14 +1,112 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For individuals</title>
- </head>
- <body>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
- </body>
- </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./signin.css">
+   <title>sign in | page</title>
+</head>
+
+<body>
+
+   <div id="whole">
+      <div id="first">
+
+         <a href="./home.html">
+            <img src="https://app.pluralsight.com/id/img/login-logo.png" alt="">
+         </a>
+
+
+         <form action="">
+            <label for="">Email address</label> <br>
+            <input type="text" id="email"><br>
+            <label for="">Password</label> <br>
+            <input type="password" id="password"><br>
+
+            <input type="submit" placeholder="Signin" id="subbtn">
+
+         </form>
+
+         <div id="forget">
+            <p>Forgot Password?</p>
+            <p>Signin with company or school</p>
+            <hr>
+            <a href="./register.html">
+               <button>Create New Account</button>
+            </a>
+
+
+         </div>
+
+         <div class="copyright">
+            <p>
+               Copyright © 2004 - 2022 Pluralsight LLC. All rights reserved.</p>
+         </div>
+
+
+
+
+
+
+
+      </div>
+
+      <div id="second">
+         <img src="https://www.pluralsight.com/content/dam/pluralsight2/login/login-h1.png" alt="">
+      </div>
+
+
+
+
+   </div>
+
+
+
+</body>
+
+<script>
+   let form = document.querySelector("form");
+
+   let userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+   form.addEventListener("submit", function (event) {
+      event.preventDefault()
+      let data = {
+         email: form.email.value,
+         password: form.password.value,
+
+      }
+      if (checkSignin(data.email, data.password) === true) {
+         localStorage.setItem("Signin", JSON.stringify(data));
+         // alert("Sign in Successful");
+         window.location.href = "home.html";
+         
+
+      }
+      else {
+         alert("Wrong Username or Password")
+      }
+   })
+
+   function checkSignin(email, password) {
+      let filter = userData.filter(function (element) {
+         return element.email === email && element.password === password;
+      })
+      if (filter.length > 0) {
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+
+
+   function reg() {
+      window.location.href = "register.html";
+      alert = "";
+   }
+
+</script>
+</html>
